@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <divid="names"> 
+
+    </div>
+    <script>
+        var names = [{ name: "Lars", phone: "1234567" }, { name: "Peter", phone: "675843" }, {
+            name: "Jan", phone: "98547"
+        }, { name: "Bo", phone: "79345" }];
+        var tables = "<table> \n <tr> \n <th>name</th> \n <th>phone</th> \n </tr> \n <tr>"
+            + names.map(x => "\n <td>" + x.name + "</td> \n <td>" + x.phone + "</td>")
+                .join('\n') + "\n</tr> \n</table>";
+
+
+        var joinMe = "<nav>\n" + names.map(x => "<a href=\"\">" + x + "</a>").join('\n') + "\n</nav>";
+
+
+        document.getElementById("names").innerHTML = joinMe;
+    </script>
+
+</body>
+
+</html>

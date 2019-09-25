@@ -25,3 +25,20 @@ var thisVariable = {
 };
 
 console.log(thisVariable.thisFunc());
+
+
+var numbers = [1, 3, 5, 10, 11];
+
+//var result = number.map();noget med at loope igennem og add?
+
+var joinMe = "<nav>\n" + names.map(x => "<a href=\"\">" + x + "</a>").join('\n') + "\n</nav>";
+
+console.log(joinMe);
+
+
+var names = [{ name: "Lars", phone: "1234567" }, { name: "Peter", phone: "675843" }, { name: "Jan", phone: "98547" }, { name: "Bo", phone: "79345" }];
+var tables = "<table> \n <tr> \n <th>name</th> \n <th>phone</th> \n </tr> \n <tr>" 
++ names.map(x => "\n <td>" + x.name + "</td> \n <td>" + x.phone + "</td>")
+.join('\n') + "\n</tr> \n</table>";
+
+console.log(tables);
